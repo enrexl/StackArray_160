@@ -60,6 +60,19 @@ int main() {
         cout << "3.Display\n";
         cout << "4. Exit\n";
         cout << "\n Enter your choice : ";
+        cin >> ch;
+        switch (ch)
+        {
+        case '1': {
+            cout << "\nEnter an element : ";
+            int element;
+            cin >> element;
+            s.push(element);
+            break;
+        }
+        default:
+            break;
+        }
     }
 }
 
