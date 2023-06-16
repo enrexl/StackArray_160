@@ -42,7 +42,7 @@ public:
             cout << "\nStack is empty." << endl;
         }
         else {
-            for (int tmp = 0;tmp <= top;tmp++) {
+            for (int tmp = top;tmp >= 0; tmp--) {
                 cout << stackArray[tmp] << endl;
             }
         }
@@ -57,12 +57,11 @@ int main() {
         cout << "\n====Stack Menu===\n";
         cout << "1. Push\n";
         cout << "2. Pop\n";
-        cout << "3.Display\n";
+        cout << "3. Display\n";
         cout << "4. Exit\n";
-        cout << "\n Enter your choice : ";
+        cout << "\nEnter your choice : ";
         cin >> ch;
-        switch (ch)
-        {
+        switch (ch){
         case '1': {
             cout << "\nEnter an element : ";
             int element;
@@ -70,6 +69,7 @@ int main() {
             s.push(element);
             break;
         }
+
         case '2': {
             if (s.empty()) {
                 cout << "\nStack is empty." << endl;
@@ -88,11 +88,15 @@ int main() {
             return 0;
         }
 
-        default: {cout << "\nInvalid Choice";
+        default: 
+            cout << "\nInvalid Choice";
             break;
+        
         }
+        
     }
 }
+
 
 
 
