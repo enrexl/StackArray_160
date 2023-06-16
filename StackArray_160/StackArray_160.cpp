@@ -29,7 +29,7 @@ public:
             return;    //1.b
         }
 
-        cout << "\nThe popped element is : " << StackArray[top] << endl; //Step 2
+        cout << "\nThe popped element is : " << stackArray[top] << endl; //Step 2
         top--;  //Step 3 decrement
     }
 
@@ -78,8 +78,17 @@ int main() {
             s.pop();
             break;
         }
-        case '3':
-        default:
+
+        case '3': {
+            s.display();
+            break;
+        }
+
+        case '4': {
+            return 0;
+        }
+
+        default: {cout << "\nInvalid Choice";
             break;
         }
     }
