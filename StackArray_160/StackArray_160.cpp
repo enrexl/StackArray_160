@@ -10,11 +10,14 @@ public:
     StackArray() { // constructor
         top = -1;
     }
-
-    int push(int element) {
-        if (top == 4) {
+    //Metode untuk menambah atau memasukkan data
+    void push() {
+        cout << "\nEnter an element : ";
+        int element;
+        cin >> element;
+        if (top == 4) { //Step 1
             cout << "Number of data exceed the limit." << endl;
-            return 0;
+            return ;
         }
 
         top++;
@@ -22,7 +25,7 @@ public:
         cout << endl;
         cout << element << " ditambahkan (pushed)" << endl;
     }
-
+    //Method menghapus data paling atas / terakhir
     void pop() {
         if (empty()) { // Step 1
             cout << "\nStack is empty. Cannnot pop." << endl;
@@ -32,11 +35,11 @@ public:
         cout << "\nThe popped element is : " << stackArray[top] << endl; //Step 2
         top--;  //Step 3 decrement
     }
-
+    //Method untuk mengecek apakah stack kosong
     bool empty() {
         return (top == -1);
     }
-
+    //Method untuk menampilkan stack dari data terakhir / paling atas
     void display() {
         if (empty()) {
             cout << "\nStack is empty." << endl;
@@ -63,10 +66,7 @@ int main() {
         cin >> ch;
         switch (ch){
         case '1': {
-            cout << "\nEnter an element : ";
-            int element;
-            cin >> element;
-            s.push(element);
+            s.push();
             break;
         }
 
