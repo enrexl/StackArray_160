@@ -18,9 +18,17 @@ public:
         }
 
         top++;
-        stackArray[top] = element;
+        stackArray[top] = element; //step 3
         cout << endl;
         cout << element << " ditambahkan (pushed)" << endl;
+    }
+
+    void pop() {
+        if (empty()) { // Step 1
+            cout << "\nStack is empty. Cannnot pop." << Endl;
+            return;    //1.b
+        }
+
     }
 
 };
