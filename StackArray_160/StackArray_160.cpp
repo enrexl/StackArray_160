@@ -16,7 +16,7 @@ public:
         int element;
         cin >> element;
         if (top == 4) { //Step 1
-            cout << "Number of data exceed the limit." << endl;
+            cout << "\nNumber of data exceed the limit1" << endl;
             return ;
         }
 
@@ -28,7 +28,7 @@ public:
     //Method menghapus data paling atas / terakhir
     void pop() {
         if (empty()) { // Step 1
-            cout << "\nStack is empty. Cannnot pop." << endl;
+            cout << "\nStack is Empty. Cannnot pop!" << endl;
             return;    //1.b
         }
 
@@ -42,7 +42,7 @@ public:
     //Method untuk menampilkan stack dari data terakhir / paling atas
     void display() {
         if (empty()) {
-            cout << "\nStack is empty." << endl;
+            cout << "\nStack is empty!." << endl;
         }
         else {
             for (int tmp = top;tmp >= 0; tmp--) {
@@ -71,10 +71,6 @@ int main() {
         }
 
         case '2': {
-            if (s.empty()) {
-                cout << "\nStack is empty." << endl;
-                break;
-            }
             s.pop();
             break;
         }
@@ -89,7 +85,7 @@ int main() {
         }
 
         default: 
-            cout << "\nInvalid Choice";
+            cout << "\nInvalid Choice!";
             break;
         
         }
