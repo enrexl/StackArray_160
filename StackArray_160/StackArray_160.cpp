@@ -25,12 +25,17 @@ public:
 
     void pop() {
         if (empty()) { // Step 1
-            cout << "\nStack is empty. Cannnot pop." << Endl;
+            cout << "\nStack is empty. Cannnot pop." << endl;
             return;    //1.b
         }
 
+        cout << "\nThe popped element is : " << StackArray[top] << endl; //Step 2
+        top--;  //Step 3 decrement
     }
 
+    bool empty() {
+        return (top == -1);
+    }
 };
 
 
