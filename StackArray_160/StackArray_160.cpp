@@ -7,9 +7,22 @@ private:
     int top;
 
 public:
-    StackArray() {
+    StackArray() { // constructor
         top = -1;
     }
+
+    int push(int element) {
+        if (top == 4) {
+            cout << "Number of data exceed the limit." << endl;
+            return 0;
+        }
+
+        top++;
+        stackArray[top] = element;
+        cout << endl;
+        cout << element << " ditambahkan (pushed)" << endl;
+    }
+
 };
 
 
